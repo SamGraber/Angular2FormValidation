@@ -1,5 +1,5 @@
 <div class="field" [ngClass]="{ 'error': !control.valid, 'required-error': false }">
-	<input type="text" class="form-control" [ngFormControl]="control" />
+	<input type="text" class="form-control" [ngFormControl]="control" #input="ngForm" />
 	<div [hidden]="control.valid" class="error-string">
 		{{error}}
 	</div>

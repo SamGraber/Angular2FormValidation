@@ -3,12 +3,12 @@ import { Component, ViewChild } from 'angular2/core';
 import { NgForm }    from 'angular2/common';
 import { Hero }    from './hero';
 import { Validator } from './validator';
-import { Textbox } from '../components/textbox/textbox';
+import { Textbox, TextboxValueAccessor } from '../components/textbox/textbox';
 
 @Component({
 	selector: 'hero-form',
 	templateUrl: 'source/form/hero-form.component.html',
-	directives: [Validator, Textbox],
+	directives: [Validator, Textbox, TextboxValueAccessor],
 })
 export class HeroFormComponent {
 	@ViewChild('form') form: NgForm;

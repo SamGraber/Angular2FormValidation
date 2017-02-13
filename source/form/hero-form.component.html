@@ -3,7 +3,8 @@
 	<form #form="ngForm" (ngSubmit)="onSubmit()">
 		<div class="form-group">
 			<label for="name">Name</label>
-			<rl-textbox></rl-textbox>
+			<rl-textbox [(ngModel)]="model.name"></rl-textbox>
+			Value: {{model.name}}
 			<input type="text"  class="form-control" required validator
 					[(ngModel)]="model.name" ngControl="name" #name="ngForm" />
 			<p *ngIf="name.errors?.validator">{{name.errors?.validator}}</p>
